@@ -1,0 +1,43 @@
+<%- include ('partials/header')-%>
+
+<section class="one">
+    <div class="row">
+        <div class="computer col-md-2">
+            <p>
+             
+            </p>
+        </div>
+        <div class="col-md-8">
+            <h1> Latests news</h1>
+            <% articles.forEach(function(article){ %>
+                <div class="ui items segment">
+                    <div class="item ">
+                      <div class="image">
+                        <img src = '<%= article.image %>'>
+                      </div>
+                      <div class="content">
+                        <a class="header" href="/blog/<%= article._id %>" ><%= article.title %></a>
+                        <div class="meta">
+                          <span><%= article.created_at.toDateString() %></span>
+                        </div>
+                        <div class="description">
+                            <p><%- article.body.substring(0,100) %></p>
+                        </div>
+                        <div class="extra">
+                            <a href="/blog/<%= article._id%>" class="ui inverted purple button">
+                                <i class="angle right icon"></i> Read more</a>
+                        </div>
+                      </div>
+                    </div>
+                    <h6 class="creator"><em>posted by <%= article.author.username %></em> </h6>
+                  </div>
+            <% }) %>
+        </div>
+        <div class="computer col-md-2"></div>
+    </div>
+</section>
+
+
+
+
+<%- include ('partials/footer')-%>

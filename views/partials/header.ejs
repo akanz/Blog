@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>chocpapi</title>
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.css" >
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/layout.css">
+    </head>
+    <body>
+
+    <div class="ui menu fixed inverted">
+        <a class="active item" href="/">
+            Home
+        </a>
+        <a class="item" href="/blog/newpost">
+            <i class="user circle icon"></i>
+            New blog
+        </a>
+        <% if(! currentuser){ %>
+            <a class="item" style="display: none;">
+                Friends
+            </a>
+       <% } else { %>
+            <a class="item">
+                Friends
+            </a>
+        <% } %>
+
+        <div class="right menu">
+           <% if(! currentuser){ %>
+                <a class="ui item" href="/register">
+                    Register
+                </a>
+                <a class="ui item" href="/login">
+                    Login
+                </a>
+           <% } else{ %>
+                <a class="ui item">
+                    welcome back, <%= currentuser.username %>
+                </a>
+                <a class="ui item" href="/logout">
+                    Logout
+                </a>
+         <%  } %>
+           
+        </div>
+        </div>
+
+        
+      

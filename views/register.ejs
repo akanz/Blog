@@ -1,0 +1,22 @@
+<%- include ('partials/header') -%>
+
+<div class="form-section">
+    <form class="ui form" action="/register" method="POST">
+        <div class="field">
+            <label>Username</label>
+            <input type="text" placeholder="username" name="username">
+        </div>
+        <div class="field">
+            <label>Email</label>
+            <input type="text" placeholder="johndoe@example.com" name="email">
+        </div>
+        <div class="field">
+            <label>Password</label>
+           <input type="password" placeholder="password" name="password">
+        </div>
+
+        <button class="ui teal button">register</button>
+    </form>
+</div>
+
+<%- include ('partials/footer') -%>

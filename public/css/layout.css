@@ -1,0 +1,83 @@
+body {
+    height: auto;
+}
+.menu {
+    font-size: 20px;
+}
+.menu a {
+    font-size: 20px;
+}
+.one {
+    margin-top: 5em;
+}
+.one .creator {
+    font-weight: lighter;
+}
+.btn-violet {
+    background-color: violet;
+    color: white;
+}
+.btn-purple{
+    background-color: #6435C9;
+    color: white;
+}
+
+
+form.delete {
+    display: inline;
+}
+.details p {
+    margin: 20px 5px;
+}
+.form-section {
+    margin: 10em auto;
+    width: 50vw;
+    padding: 20px;
+    box-shadow:  gray;
+}
+
+/* comments page css */
+.comment-section {
+    width: 50vw;
+    margin: 10px auto;
+    padding: 15px 30px;
+    background-color: ghostwhite;
+    color: black;
+    height: auto;
+    min-height: 200px;
+}
+.end-comment {
+    float: right;
+}
+.comments {
+    margin: 10px 0;
+}
+.comments .date {
+    color: steelblue;
+    font-size: 14px;
+}
+
+/* newcomments page css */
+.add-comment-section {
+    width: 40vw;
+    margin: 5em auto;
+    background-color: lavender;
+    padding: 10px 20px ;
+}
+
+.footer-section {
+    background-color: black;
+    width: 100vw;
+    min-height: 70px;
+    height: auto;
+    padding: 20px;
+    color: white;
+    margin-top: 20px;
+    text-align: center;
+}
+
+@media screen and (max-width: 600px){
+    .one .computer {
+        display: none;
+    }
+}
